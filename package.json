@@ -1,0 +1,48 @@
+{
+  "name": "@ag1/return_switch",
+  "version": "0.1.0",
+  "description": "a switch condition that return result",
+  "main": "index.js",
+  "author": "agent one co., ltd.",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "yarn lint && yarn compile",
+    "compile": "tsc",
+    "lint": "tslint -p tsconfig.json -t stylish",
+    "test": "NODE_ENV=test jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.1",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  },
+  "keywords": [
+    "control-statement",
+    "typescript"
+  ],
+  "repository": {
+    "url": "https://github.com/AgentOneCoLtd/return_switch.git",
+    "type": "git"
+  },
+  "readmeFilename": "readme.md",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/*.spec.+(ts)"
+    ]
+  }
+}
