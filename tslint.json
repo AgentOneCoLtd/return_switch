@@ -12,7 +12,6 @@
     "newline-per-chained-call": false,
     "no-any": false,
     "no-implicit-dependencies": false,
-    "no-import-side-effect": [true, {"ignore-module": "(reflect-metadata)$"}],
     "no-parameter-properties": false,
     "no-require-imports": false,
     "no-shadowed-variable": false,
