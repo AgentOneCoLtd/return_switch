@@ -2,7 +2,18 @@
 
 Control Statement that can return result is cool. It can reduce ugly code. Some other libs have done this but they are too complicated for our need.
 
+
+## install
+
+```bash
+yarn add @ag1/return_switch
+```
+
 ## usage
+
+```ts
+import { returnSwitch } from '@ag1/return_switch';
+```
 
 ```ts
 const foo = returnSwitch<string>('foo')([
