@@ -1,6 +1,6 @@
 {
   "name": "@ag1/return_switch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a switch condition that return result",
   "main": "index.js",
   "author": "agent one co., ltd.",
