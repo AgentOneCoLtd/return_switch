@@ -1,30 +1,19 @@
 import { returnSwitch } from './index';
 
 it('should return case where left === right', () => {
-    const foo = returnSwitch<string>('foo')([
-        ['foo', 'foo'],
-        [true, 'bar'],
-    ]);
+    const foo = returnSwitch<string>('foo')([['foo', 'foo'], [true, 'bar']]);
 
-    expect(foo)
-        .toBe('foo');
+    expect(foo).toBe('foo');
 });
 
 it('should return case where left === true', () => {
-    const bar = returnSwitch<string>('bar')([
-        ['foo', 'foo'],
-        [true, 'bar'],
-    ]);
+    const bar = returnSwitch<string>('bar')([['foo', 'foo'], [true, 'bar']]);
 
-    expect(bar)
-        .toBe('bar');
+    expect(bar).toBe('bar');
 });
 
 it('should throw error if no match', () => {
-    const getBar = () => returnSwitch<string>('bar')([
-        ['foo', 'foo'],
-    ]);
+    const getBar = () => returnSwitch<string>('bar')([['foo', 'foo']]);
 
-    expect(getBar)
-        .toThrowError();
+    expect(getBar).toThrowError();
 });

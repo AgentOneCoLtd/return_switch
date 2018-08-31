@@ -10,8 +10,7 @@ export interface IReturnSwitchCase<T> {
 
 export const returnSwitch = <T>(left: any) => (rsCaseList: IReturnSwitchCase<T>[]): T => {
     const predicate = (rsCase: IReturnSwitchCase<T>) =>
-        rsCase[ReturnSwitchIndex.RIGHT] === true
-        || left === rsCase[ReturnSwitchIndex.RIGHT];
+        rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
 
     const rsCase = rsCaseList.find(predicate);
 
