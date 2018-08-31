@@ -1,23 +1,27 @@
 {
   "name": "@ag1/return_switch",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a switch condition that return result",
   "main": "index.js",
   "author": "agent one co., ltd.",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "yarn lint && yarn compile",
     "compile": "tsc",
+    "test": "jest",
     "lint": "tslint -p tsconfig.json -t stylish",
-    "test": "NODE_ENV=test jest"
+    "prettier": "yarn prettier-config && yarn prettier-ts",
+    "prettier-config": "prettier --no-config --write './*.{json,yml}'",
+    "prettier-ts": "prettier --write './**/*.ts'"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.1",
-    "jest": "^23.1.0",
-    "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "typescript": "^2.9.2"
+    "@types/jest": "^23.3.1",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "typescript": "^3.0.3"
   },
   "keywords": [
     "control-statement",
