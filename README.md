@@ -2,6 +2,9 @@
 
 Control Statement that can return result is cool. It can reduce ugly code. Some other libs have done this but they are too complicated for our need.
 
+## support
+
+at least ES6/ES2015
 
 ## install
 
@@ -45,6 +48,3 @@ const lorem = returnSwitch<string>('lorem')([
 ```bash
 yarn test
 ```
-
-## todo
-1. perf test
