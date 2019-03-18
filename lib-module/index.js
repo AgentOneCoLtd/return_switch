@@ -9,12 +9,14 @@ export var ReturnSwitchIndex;
  * @return      return `value` if `right` === true or `left` === `right`
  */
 // tslint:disable-next-line no-any
-export const returnSwitch = (left) => (rsCaseList) => {
-    const predicate = (rsCase) => rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
-    const rsCase = rsCaseList.find(predicate);
-    if (rsCase === undefined) {
-        throw new Error('NO_MATCH: no case is matched');
-    }
-    return rsCase[ReturnSwitchIndex.VALUE];
-};
+export function returnSwitch(left) {
+    return (rsCaseList) => {
+        const predicate = (rsCase) => rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
+        const rsCase = rsCaseList.find(predicate);
+        if (rsCase === undefined) {
+            throw new Error('NO_MATCH: no case is matched');
+        }
+        return rsCase[ReturnSwitchIndex.VALUE];
+    };
+}
 //# sourceMappingURL=index.js.map

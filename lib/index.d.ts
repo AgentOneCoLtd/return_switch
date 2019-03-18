@@ -11,5 +11,5 @@ export interface IReturnSwitchCase<T> {
  * @param  left anything to compare with `right`
  * @return      return `value` if `right` === true or `left` === `right`
  */
-export declare const returnSwitch: <T>(left: any) => (rsCaseList: IReturnSwitchCase<T>[]) => T;
+export declare function returnSwitch<T>(left: any): (rsCaseList: IReturnSwitchCase<T>[]) => T;
 //# sourceMappingURL=index.d.ts.map

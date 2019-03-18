@@ -15,15 +15,17 @@ export interface IReturnSwitchCase<T> {
  * @return      return `value` if `right` === true or `left` === `right`
  */
 // tslint:disable-next-line no-any
-export const returnSwitch = <T>(left: any) => (rsCaseList: IReturnSwitchCase<T>[]): T => {
-    const predicate = (rsCase: IReturnSwitchCase<T>) =>
-        rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
+export function returnSwitch<T>(left: any) {
+    return (rsCaseList: IReturnSwitchCase<T>[]): T => {
+        const predicate = (rsCase: IReturnSwitchCase<T>) =>
+            rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
 
-    const rsCase = rsCaseList.find(predicate);
+        const rsCase = rsCaseList.find(predicate);
 
-    if (rsCase === undefined) {
-        throw new Error('NO_MATCH: no case is matched');
-    }
+        if (rsCase === undefined) {
+            throw new Error('NO_MATCH: no case is matched');
+        }
 
-    return rsCase[ReturnSwitchIndex.VALUE];
-};
+        return rsCase[ReturnSwitchIndex.VALUE];
+    };
+}
