@@ -1,6 +1,6 @@
 {
   "name": "@ag1/return_switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a switch condition that return result",
   "main": "./lib/index.js",
   "jsnext:main": "./lib-module/index.js",
