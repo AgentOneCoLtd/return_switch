@@ -1,6 +1,10 @@
+## v1.1.0
+
+* Update build process
+
 ## v1.0.1
 
-* export returnSwitch as function instead const
+* Export returnSwitch as function instead const
 
 ## v1.0.0
 
