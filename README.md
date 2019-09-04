@@ -4,7 +4,7 @@ Control Statement that can return result is cool. It can reduce ugly code. Some 
 
 ## support
 
-at least ES6/ES2015
+at least ES2015
 
 ## install
 
