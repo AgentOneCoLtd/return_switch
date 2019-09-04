@@ -13,7 +13,7 @@ it('should return case where left === true', () => {
 });
 
 it('should throw error if no match', () => {
-    const getBar = () => returnSwitch<string>('bar')([['foo', 'foo']]);
+    const getBar = (): string => returnSwitch<string>('bar')([['foo', 'foo']]);
 
     expect(getBar).toThrowError();
 });

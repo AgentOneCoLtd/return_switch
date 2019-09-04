@@ -4,7 +4,7 @@ export enum ReturnSwitchIndex {
 }
 
 export interface IReturnSwitchCase<T> {
-    // tslint:disable-next-line no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [ReturnSwitchIndex.RIGHT]: any;
     [ReturnSwitchIndex.VALUE]: T;
 }
@@ -14,10 +14,10 @@ export interface IReturnSwitchCase<T> {
  * @param  left anything to compare with `right`
  * @return      return `value` if `right` === true or `left` === `right`
  */
-// tslint:disable-next-line no-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function returnSwitch<T>(left: any) {
     return (rsCaseList: IReturnSwitchCase<T>[]): T => {
-        const predicate = (rsCase: IReturnSwitchCase<T>) =>
+        const predicate = (rsCase: IReturnSwitchCase<T>): boolean =>
             rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
 
         const rsCase = rsCaseList.find(predicate);
