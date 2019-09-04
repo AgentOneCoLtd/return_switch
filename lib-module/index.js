@@ -8,7 +8,7 @@ export var ReturnSwitchIndex;
  * @param  left anything to compare with `right`
  * @return      return `value` if `right` === true or `left` === `right`
  */
-// tslint:disable-next-line no-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function returnSwitch(left) {
     return (rsCaseList) => {
         const predicate = (rsCase) => rsCase[ReturnSwitchIndex.RIGHT] === true || left === rsCase[ReturnSwitchIndex.RIGHT];
