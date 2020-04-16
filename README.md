@@ -1,18 +1,19 @@
 # Return Switch
+![Node.js CI](https://github.com/AgentOneCoLtd/return_switch/workflows/Node.js%20CI/badge.svg)
 
 Control Statement that can return result is cool. It can reduce ugly code. Some other libs have done this but they are too complicated for our need.
 
-## support
+## Support
 
 at least ES2015
 
-## install
+## Install
 
 ```bash
 yarn add @ag1/return_switch
 ```
 
-## usage
+## Usage
 
 ```ts
 import { returnSwitch } from '@ag1/return_switch';
@@ -43,7 +44,7 @@ const lorem = returnSwitch<string>('lorem')([
 ]); // NO_MATCH, throw error
 ```
 
-## test
+## Test
 
 ```bash
 yarn test
